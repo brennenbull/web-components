@@ -9,9 +9,9 @@ var tmpl = document.querySelector('template');
 
 class ImgSlider extends HTMLElement{
   connectedCallback(){
-    var root = this.createShadowRoot();
+    var root = this.attachShadow({mode: 'open'});
     root.appendChild(document.importNode(tmpl.content, true));
   }
 }
 
-customElements.define('img-slider', ImgSlider)
+window.customElements.define('img-slider', ImgSlider)

@@ -15,10 +15,15 @@
   // Define and register <shadow-element>
   // that uses Shadow DOM and a template.
   class Shadow extends HTMLElement{
-    connectedCallback(){
-      var template = importDoc.getElementById('t');
+    constructor(){
+      super();
       var root = this.attachShadow({mode:'open'});
+      var template = importDoc.getElementById('t');
       root.appendChild(document.importNode(template.content, true))
+    }
+
+    connectedCallback(){
+
     }
   }
   window.customElements.define('shadow-element', Shadow)

@@ -8,12 +8,12 @@
   <body>
     <template id="t">
       <style>
-        ::content > * {
+        #s1::slotted(*){
           color: red;
         }
       </style>
       <span>I'm a shadow-element using Shadow DOM!</span>
-      <slot name = "content"></slot>
+      <slot id="s1"></slot>
     </template>
   </body>
 </html>

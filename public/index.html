@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <script src="../webcomponentsjs/webcomponents-lite.js" charset="utf-8"></script>
-    <link rel="import" href="template.html">
+    <script src="./webcomponentsjs/webcomponents-lite.js" charset="utf-8"></script>
+    <link rel="import" href="./exp/template.html">
   </head>
   <body>
     <say-hi name="Eric"></say-hi>
     <shadow-element>
-      <div>( I'm in the light dom )</div>
+      <div slot="content">( I'm in the light dom )</div>
     </shadow-element>
   </body>
 </html>

@@ -12,8 +12,6 @@
 (function() {
  // importee
   var importDoc = document.currentScript.ownerDocument;
-
-  // console.log(template);
   // Define and register <shadow-element>
   // that uses Shadow DOM and a template.
   class Shadow extends HTMLElement{

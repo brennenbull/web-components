@@ -7,28 +7,66 @@
   <body>
     <template id="tab-list">
       <style>
-        ul{
+        :host{
+          display: inline-block;
+          /*background-color: #58585A;
+          padding: 0;
+          margin: 0;*/
+        }
+        :host ul{
+          padding: 0;
+          margin: 0;
+          list-style: none;
+          position: relative;
+        }
+
+        .categories{
+          display: inline-block;
+          background-color: #58585A;
+          /*list-style: none;
+          position: relative;
+          padding: 0;
+          margin: 0;*/
+        }
+        /*hides the list of links*/
+        .categories ul{
           display: none;
           position: absolute;
         }
-        /*ul  #s1::slotted(*){
-          display:inline-block;
+        
+        ::slotted(*){
+          width: 170px;
+          float: none;
+          display: list-item;
+          position: relative;
           background-color: #58585A;
-        }*/
-        /*.dropdown ul li:hover > ul {
-          display:inherit;
-        }*/
-        .selected:hover, #s1::slotted(tab-item) {
+        }
+
+        ::slotted(*:hover){
           width: 100%;
           background-color: #6CCCAA;
         }
+
+        .categories:hover > ul {
+          display:inherit;
+        }
+
+        .selected:hover {
+          width: 100%;
+          background-color: #6CCCAA;
+        }
+
       </style>
-      <li class='categories'>
-        <a class='selected' id="lable"></a>
-        <ul class='categorie-menu'>
-          <slot name="item" id="item" id='s1'></slot>
+      <div>
+        <ul>
+          <li class='categories'>
+            <a class='selected' id="lable"></a>
+            <ul class='categorie-menu'>
+              <slot name="item" id="item" id='s1'></slot>
+            </ul>
+          </li>
         </ul>
-      </li>
+      </div>
     </template>
   </body>
 </html>

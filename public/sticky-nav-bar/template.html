@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="import" href="./tab-list-templ.html">
+    <script src="../webcomponentsjs/webcomponents-lite.js" charset="utf-8"></script>
+    <script src="script.js" charset="utf-8" defer></script>
+  </head>
+  <body>
+    <template id="nav">
+      <style media="screen">
+      .dropdown{
+        height: 60px;
+      }
+      :host{
+        height: 60px;
+        display: inline-block;
+      }
+
+      .dropdown ul ul{
+        display: none;
+        position: absolute;
+      }
+
+      .dropdown ul li {
+        display:inline-block;
+        background-color: #58585A;
+      }
+
+      .dropdown ul #s1::slotted(*) {
+        display:inline-block;
+        background-color: #58585A;
+      }
+
+      .dropdown ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        position: relative;
+      }
+      .dropdown a:hover {
+        width: 100%;
+        background-color: #6CCCAA;
+      }
+
+      .dropdown ul li:hover > ul {
+        display:inherit;
+      }
+
+      .dropdown ul ul li {
+        width:170px;
+        float:none;
+        display:list-item;
+        position: relative;
+      }
+      </style>
+      <div class="dropdown">
+          <ul>
+            <slot name="lable" id='s1'></slot>
+            <!-- <li class='categories'>
+              <a class='selected'></a>
+              <ul class='categorie-menu'>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Location</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Other Stuff</a></li>
+              </ul>
+            </li> -->
+            <li>
+              <a class='selected'>About</a>
+              <ul class='categorie-menu'>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Location</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Other Stuff</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+    </template>
+  </body>
+</html>

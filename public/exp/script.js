@@ -1,9 +1,15 @@
 // Define and register <say-hi>.
 (function() {
   class Hi extends HTMLElement{
+    constructor(){
+      super();
+      var root = this.attachShadow({mode:'open'});
+      root.innerHTML = `Hello, <b>
+                       ${(this.getAttribute('name') || '?')}</b>`;
+
+    }
     connectedCallback(){
-      this.innerHTML = 'Hello, <b>' +
-                       (this.getAttribute('name') || '?') + '</b>';
+
     }
   }
   window.customElements.define('say-hi', Hi)

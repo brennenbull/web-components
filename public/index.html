@@ -6,10 +6,19 @@
     <script src="./webcomponentsjs/webcomponents-lite.js" charset="utf-8"></script>
     <link rel="import" href="./exp/template.html">
     <link rel="import" href="./img-slider-custome-ele/slider.html">
+    <link rel="import" href="./sticky-nav-bar/template.html">
   </head>
   <body>
-    <say-hi name="Eric"></say-hi>
-    <shadow-element>
+    <nav-bar>
+      <tab-list lable="About" slot='lable'>
+        <tab-item slot='item' name='Contact'></tab-item>
+        <tab-item slot='item' name='Location'></tab-item>
+        <tab-item slot='item' name='History'></tab-item>
+        <tab-item slot='item' name='Stuff'></tab-item>
+      </tab-list>
+    </nav-bar>
+    <!-- <say-hi name="Eric"></say-hi> -->
+    <!-- <shadow-element>
       <div class="slot">( I'm in the light dom )</div>
     </shadow-element>
 
@@ -18,6 +27,6 @@
       <img slot="img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/5689/grooves.jpg">
       <img slot="img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/5689/arch.jpg">
       <img slot="img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/5689/sunset.jpg">
-    </img-slider>
+    </img-slider> -->
   </body>
 </html>

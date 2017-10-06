@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../webcomponentsjs/webcomponents-lite.js" charset="utf-8"></script>
+    <script src="tab-list.js" charset="utf-8" defer></script>
+  </head>
+  <body>
+    <template id="tab-list">
+      <style>
+        ul{
+          display: none;
+          position: absolute;
+        }
+        /*ul  #s1::slotted(*){
+          display:inline-block;
+          background-color: #58585A;
+        }*/
+        /*.dropdown ul li:hover > ul {
+          display:inherit;
+        }*/
+        .selected:hover, #s1::slotted(tab-item) {
+          width: 100%;
+          background-color: #6CCCAA;
+        }
+      </style>
+      <li class='categories'>
+        <a class='selected' id="lable"></a>
+        <ul class='categorie-menu'>
+          <slot name="item" id="item" id='s1'></slot>
+        </ul>
+      </li>
+    </template>
+  </body>
+</html>

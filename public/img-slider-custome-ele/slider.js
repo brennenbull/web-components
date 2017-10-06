@@ -10,7 +10,6 @@
       super();
       var root = this.attachShadow({mode: 'open'});
       var tmpl = importDoc.querySelector('template');
-
       root.appendChild(document.importNode(tmpl.content, true));
 
     }

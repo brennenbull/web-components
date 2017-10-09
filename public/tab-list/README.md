@@ -4,7 +4,7 @@
 1.`<tab-list>`
   + Use label='name' where name is the menu name. ie(About, Contact, News).
   + Use the slot='item' to add new items to the dropdown.
-  + The item slot currently supports use of <tab-item> and <a>.
+  + The item slot currently supports use of `<tab-item>` and `<a>`.
 
 2.`<tab-item>`
   + Use name='name' attribute to git the dropdown menu items names.

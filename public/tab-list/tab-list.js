@@ -23,7 +23,7 @@
       super();
       this.root = this.attachShadow({mode: 'open'});
       this.tmpl = importDoc.querySelector('template');
-      this.tmpl.content.querySelector('#lable').innerHTML = this.getAttribute('lable')
+      this.tmpl.content.querySelector('#label').innerHTML = this.getAttribute('label')
       this.root.appendChild(document.importNode(this.tmpl.content, true));
     }
 

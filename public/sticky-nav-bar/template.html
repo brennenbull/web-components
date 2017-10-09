@@ -9,65 +9,14 @@
   <body>
     <template id="nav">
       <style media="screen">
-      /*adds size to tab*/
-      :host{
-        display: inline-block;
-      }
-      :slotted(*){
-        /*display: inline-block;*/
-      }
-      /*hid the dropdown*/
-      .dropdown ul ul{
-        display: none;
-        position: absolute;
-      }
-      /*styles inner list and label*/
-      .dropdown ul li {
-        display:inline-block;
-        background-color: #58585A;
-      }
-
-      /*adds styling to dropdown*/
-      .dropdown ul {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        position: relative;
-      }
-
-
-      /*adds hover effect to elements*/
-      .dropdown a:hover {
-        width: 100%;
-        background-color: #6CCCAA;
-      }
-
-      /*displays the list*/
-      .dropdown ul li:hover > ul {
-        display:inherit;
-      }
-      /*adds the box to suround the list item*/
-      .dropdown ul ul li {
-        width:170px;
-        float:none;
-        display:list-item;
-        position: relative;
-      }
+        :host{
+          display: inline-block;
+        }
       </style>
-      <div class="dropdown">
-          <ul>
-            <!-- <li>
-              <a class='selected'>About</a>
-              <ul class='categorie-menu'>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Location</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Other Stuff</a></li>
-              </ul>
-            </li> -->
-            <slot name="lable" id='s1'></slot>
-          </ul>
-        </div>
+      <div>
+        <slot name="lable" id='s1'></slot>
+      </div>
+
     </template>
   </body>
 </html>

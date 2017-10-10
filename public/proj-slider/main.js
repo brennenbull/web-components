@@ -33,8 +33,6 @@
     }
 
     slide(x) {
-      console.log(x);
-      console.log(this.contain.offsetWidth);
       let transform = Math.max(8,(Math.min(x, this.contain.offsetWidth-2)));
       this.discrip.style.width = transform + "px";
       this.slider.style.left = transform-4 + "px";
@@ -43,6 +41,7 @@
     connectedCallback(){
       this.shadowRoot.appendChild(this.tmpl.content);
       this.slide(500)
+
     }
   }
   window.customElements.define('proj-slider', ProjSlider);

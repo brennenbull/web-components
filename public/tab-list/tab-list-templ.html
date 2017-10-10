@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="../webcomponentsjs/webcomponents-lite.js" charset="utf-8"></script>
     <script src="tab-list.js" charset="utf-8" defer></script>
   </head>
   <body>
@@ -18,31 +17,38 @@
         }
 
         .categories{
+          width: 57px;
+          height: 20px;
           display: inline-block;
-          background-color: #58585A;
+          background-color: #b7cff7;
+          text-align: center;
+          border: 1px solid lightgrey;
+        }
+
+        .categories:hover > ul {
+          display:inherit;
         }
 
         /*hides the list of links*/
         .categories ul{
           display: none;
           position: absolute;
+          top: 100%;
+          left:0;
         }
 
         ::slotted(*){
-          width: 170px;
+          width: 100px;
           float: none;
           display: list-item;
           position: relative;
-          background-color: #58585A;
+          background-color: #b7cff7;
+          text-decoration: none;
         }
 
         ::slotted(*:hover){
           width: 100%;
           background-color: #6CCCAA;
-        }
-
-        .categories:hover > ul {
-          display:inherit;
         }
 
         .selected:hover {
@@ -51,7 +57,6 @@
         }
 
       </style>
-      <div>
         <ul>
           <li class='categories'>
             <a class='selected' id="label"></a>
@@ -60,7 +65,6 @@
             </ul>
           </li>
         </ul>
-      </div>
     </template>
   </body>
 </html>

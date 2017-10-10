@@ -6,7 +6,7 @@
   + Use the slot='item' to add new items to the dropdown.
   + The item slot currently supports use of `<tab-item>` and `<a>`.
 
-2.`<tab-item>`
+2.`<tab-item>` Not needed
   + Use name='name' attribute to git the dropdown menu items names.
   + Use the href='/#' attribute to set href.
 

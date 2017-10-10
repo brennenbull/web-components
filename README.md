@@ -9,5 +9,4 @@
 ## Lessons Learned
   1. Don't use!!
     `this.root.appendChild(document.importNode(this.tmpl.content, true));` this line imports the template but it makes it very difficult to add any kind of dynamic inputs or dynamic display.
-
     Use `this.root.appendChild(this.tmpl.content)`

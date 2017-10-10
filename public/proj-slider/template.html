@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>slider-temp</title>
+    <script src="main.js" charset="utf-8" defer></script>
+  </head>
+  <body>
+    <template id="">
+      <style media="screen">
+      :host{
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none; 
+      }
+      .ct {
+        width: 1000px;
+        height: 500px;
+        overflow: hidden;
+        -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        border: 1px solid rgba(77, 77, 77, 0.19);
+        position: relative; }
+        .ct .ct_img, .ct .ct_disc {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          overflow: hidden;
+          background: white;
+          background: radial-gradient(ellipse at center, white 0%, white 26%, #eff0eb 100%); }
+        .ct .ct_disc {
+          width: 50px; }
+        .ct .ct_disc_contain {
+          width: 600px;
+          height: 80%;
+          top: 0;
+          bottom: 0;
+          left: 10%;
+          padding: 15px;
+          margin: auto;
+          position: absolute;
+          background: #ffffff;
+          border-radius: 5px;
+          -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+        .ct img {
+          height: 115%; }
+        .ct .ct_slider {
+          height: 100%;
+          width: 8px;
+          position: absolute;
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+          z-index: 1;
+          background-color: #4b4d4f;
+          cursor: pointer;
+          pointer-events: auto; }
+          .ct .ct_slider::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 175%;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 7.5px 0 7.5px 13px;
+            border-color: transparent transparent transparent #4b4d4f; }
+          .ct .ct_slider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 175%;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 7.5px 13.0px 7.5px 0;
+            border-color: transparent #4b4d4f transparent transparent; }
+
+      .ct_footer {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 15%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center; }
+
+      .link_btn {
+        margin-left: 10px;
+        margin-right: 10px;
+        position: relative;
+        border: none;
+        border-radius: 3px;
+        -webkit-box-shadow: 0 10px 15px rgba(52, 152, 219, 0.37), 0 6px 15px rgba(52, 152, 219, 0.23);
+        box-shadow: 0 10px 15px rgba(52, 152, 219, 0.37), 0 6px 15px rgba(52, 152, 219, 0.23);
+        background: #2c3e50;
+        background: -webkit-linear-gradient(to bottom, #4174a8, #3498db);
+        background: linear-gradient(to bottom, #4174a8, #3498db);
+        transition: all 100ms ease-in; }
+        .link_btn:hover {
+          -webkit-box-shadow: 0 2px 5px rgba(52, 152, 219, 0.7), 0 6px 10px rgba(52, 152, 219, 0.23);
+          box-shadow: 0 2px 5px rgba(52, 152, 219, 0.7), 0 6px 10px rgba(52, 152, 219, 0.23); }
+        .link_btn a {
+          font-family: 'Heebo', Helvetica, Arial, sans-serif;
+          font-weight: 500;
+          font-size: 12px;
+          letter-spacing: 0.07em;
+          text-transform: uppercase;
+          line-height: 24px;
+          color: #ffffff;
+          text-decoration: none;
+          text-shadow: 0px 0px 1px #4174a8; }
+          .link_btn a:hover, .link_btn a:focus, .link_btn a:active {
+            text-decoration: none; }
+      </style>
+      <div class="ct">
+        <div class="ct_img">
+          <img src="soundfly.png" alt="" draggable="false">
+        </div>
+        <div class="ct_disc">
+          <div class="ct_disc_contain">
+            <h3>Project Title</h3>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="ct_footer">
+              <button class="link_btn" type="button" name="button"><a href="#">GitHub</a></button>
+              <button type="button" name="button" class="link_btn"><a href="#">View Live</a></button>
+            </div>
+          </div>
+        </div>
+        <span class="ct_slider"></span>
+      </div>
+    </template>
+  </body>
+</html>

@@ -11,9 +11,8 @@
       this.tmpl.content.querySelector('button').addEventListener('click', this.addNum.bind(this));
       this.input
       this.output = this.tmpl.content.querySelector('#output');
-      this.output.innerHTML = this.count
-      this.shadowRoot.appendChild(document.importNode(this.tmpl.content, true));
-      // this.shadowRoot.appendChild(this.tmpl.content)
+      this.output.innerHTML = this.count;
+      this.shadowRoot.appendChild(this.tmpl.content)
     }
     addNum(){
       this.count++;
